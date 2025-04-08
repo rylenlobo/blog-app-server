@@ -13,7 +13,10 @@ app.use(cookieParser());
 // Enable CORS with the base domain from the environment variable
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://blog-app-eight-ecru-27.vercel.app/"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true
   })
